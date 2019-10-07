@@ -1,0 +1,775 @@
+html, body {
+    position: relative;
+    height: 100%;
+    font-size: 1em;
+  }
+  
+  .swiper-container {
+    width: 100%;
+    height: 50%;
+    margin: 0em 0 5em 0;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    background: #141E30;
+    color: #fafafe;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    border-radius: 0.75em;
+    width: 100%;
+    /*box-shadow: 0px 2px 5px 1.5px rgba(20,30,48,0.40);*/
+  }
+  /*COVER IMAGES*/
+  .swiper-slide:nth-child(1){
+    background-image: url("/images/Portfolio/Branding/6/meraGhar_bag2.png");
+    background-size: cover;
+    background-position: center;
+    transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .swiper-slide:nth-child(1):hover{
+    background-image: linear-gradient(-45deg, #009FFF, #ec2F4B);
+    color: #fafafe;
+  }
+
+  .swiper-slide:nth-child(2){
+    background-image: url("/images/Portfolio/Web/1/macbook-Neheria-home2.png");
+    background-size: cover;
+    background-position: center;
+    transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .swiper-slide:nth-child(2):hover{
+    background-image: linear-gradient(-45deg, #1CB5E0, #000046);
+  }
+
+  .swiper-slide:nth-child(3){
+    background-image: url("/images/Portfolio/Graphic/4/moubs_m.png");
+    background-size: cover;
+    background-position: center;
+    transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .swiper-slide:nth-child(3):hover{
+    background-image: linear-gradient(-45deg, #0099F7, #F11712);
+  }
+  /*END COVER IMAGES*/
+
+  .swiper-slide:hover{
+      opacity: 0.7;
+  }
+
+  .opacity{
+    display: flex;
+    color: #fafafe;
+    cursor: pointer;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+ .opacity:hover{
+    color: #000;
+  }
+
+  /*MODALS*/
+  /* The Modal (background) */
+  #myModal{
+    transition: 0.5s;
+  }
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 3.5em;
+    margin-bottom: 2em;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    background-color: rgb(0,0,0);
+    background-image: linear-gradient(-90deg,rgba(20,30,48,1), rgba(36,59,85,.9)); /*Royal*/
+    opacity: .97;
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0%;
+    left: 18%;
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  .caption {
+    display: inline-block;
+    max-width: 800px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fafafe;
+    color: #212121;
+    margin: 2em;
+    height: 12em;
+    width: 12em;
+    border-radius: 10%;
+    cursor: pointer;
+    box-shadow: 0px 6px 12px 3px rgba(20,30,48,0.90);
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .caption:last-child{
+    margin-bottom: 2em;
+    }
+
+    .caption:hover{
+        background-color: #141E30; /*Royal*/
+        color: #fafafe;
+        }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, .caption {
+    animation: zoom 0.6s;
+    -webkit-animation: zoom 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  @-webkit-keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  /*X1*/
+  .close{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #f1f1f1;
+    font-weight: bold;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+  }
+
+  .close i{
+      font-size: 1.8em;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #F8FF00;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /*X2*/
+  .close2{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #f1f1f1;
+    font-weight: bold;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+  }
+
+  .close2 i{
+      font-size: 1.8em;
+  }
+  
+  .close2:hover,
+  .close2:focus {
+    color: #F8FF00;
+    text-decoration: none;
+    cursor: pointer;
+  }
+   /*X3*/
+   .close3{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #f1f1f1;
+    font-weight: bold;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+  }
+
+  .close3 i{
+      font-size: 1.8em;
+  }
+  
+  .close3:hover,
+  .close3:focus {
+    color: #F8FF00;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+      margin-bottom: 5em;
+    }
+
+    .caption:last-child{
+        margin-bottom: 2.5em;
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+    .modal{
+        overflow-y: auto; 
+    }
+    .modal-content{
+        left: 17%;
+        margin-left: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .modal-content{
+        left: 0%;
+        margin-left: 0em;
+    }
+}
+  
+/*INSIDE MODALS*/
+.modalIn{
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 3.5em;
+    margin-bottom: 2em;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    color: #212121;
+    background-color: rgb(0,0,0);
+    background-image: linear-gradient(-90deg,#ECE9E6, #FFFFFF); /*Clouds*/
+  }
+
+  .inContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0%;
+    left: 18%;
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    line-height: 1.5em;
+  }
+
+  .inContainer img{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 3.5em;
+  }
+
+  @media only screen and (max-width: 425px){
+    .inContainer{
+      font-size: 1em;
+      left: 5%; 
+      padding: 2em;
+      width: 65vw;
+      max-width: 300px;
+    }
+    .inContainer img{
+      width: 100%;
+      height: auto;
+      padding-left: -2em;
+    }
+}
+
+@media only screen and (max-width: 768px){
+  .inContainer{
+    font-size: 1em;
+    left: 10%; 
+    padding: 2em;
+    width: 70vw;
+    max-width: 600px;
+  }
+}
+
+@media only screen and (max-width: 1024px){
+  .inContainer{
+    font-size: 1em;
+    left: 15%; 
+    padding: 2em;
+    width: 70vw;
+    max-width: 700px;
+  }
+}
+
+/*BACK----------------------------------*/
+.back{
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    color: #141E30; /*Royal*/
+    font-weight: bold;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+  }
+  .back i{
+    font-size: 3em;
+}
+
+.back:hover,
+.back:focus {
+  color: #F8FF00;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back2{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #141E30; /*Royal*/
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+.back2 i{
+  font-size: 3em;
+}
+
+.back2:hover,
+.back2:focus {
+color: #F8FF00;
+text-decoration: none;
+cursor: pointer;
+}
+.back2{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #141E30; /*Royal*/
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+.back2 i{
+  font-size: 3em;
+}
+
+.back2:hover,
+.back2:focus {
+color: #F8FF00;
+text-decoration: none;
+cursor: pointer;
+}
+
+.back3{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #141E30; /*Royal*/
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+.back3 i{
+  font-size: 3em;
+}
+
+.back3:hover,
+.back3:focus {
+color: #F8FF00;
+text-decoration: none;
+cursor: pointer;
+}
+
+.back4{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #141E30; /*Royal*/
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+.back4 i{
+  font-size: 3em;
+}
+
+.back4:hover,
+.back4:focus {
+color: #F8FF00;
+text-decoration: none;
+cursor: pointer;
+}
+
+.back2_2{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #141E30; /*Royal*/
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+.back2_2 i{
+  font-size: 3em;
+}
+
+.back2_2:hover,
+.back2_2:focus {
+color: #F8FF00;
+text-decoration: none;
+cursor: pointer;
+}
+
+.back2_3{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #141E30; /*Royal*/
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+.back2_3 i{
+  font-size: 3em;
+}
+
+.back2_3:hover,
+.back2_3:focus {
+color: #F8FF00;
+text-decoration: none;
+cursor: pointer;
+}
+
+.back2_4{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #141E30; /*Royal*/
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+.back2_4 i{
+  font-size: 3em;
+}
+
+.back2_4:hover,
+.back2_4:focus {
+color: #F8FF00;
+text-decoration: none;
+cursor: pointer;
+}
+
+.back3_1{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #141E30; /*Royal*/
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+.back3_1 i{
+  font-size: 3em;
+}
+
+.back3_1:hover,
+.back3_1:focus {
+color: #F8FF00;
+text-decoration: none;
+cursor: pointer;
+}
+
+.back3_2{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #141E30; /*Royal*/
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+.back3_2 i{
+  font-size: 3em;
+}
+
+.back3_2:hover,
+.back3_2:focus {
+color: #F8FF00;
+text-decoration: none;
+cursor: pointer;
+}
+
+.back3_3{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #141E30; /*Royal*/
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+.back3_3 i{
+  font-size: 3em;
+}
+
+.back3_3:hover,
+.back3_3:focus {
+color: #F8FF00;
+text-decoration: none;
+cursor: pointer;
+}
+/*BACK----------------------------------*/
+.modalIn{
+    animation: slide 0.4s cubic-bezier(0,.68,.51,.98);
+    -webkit-animation: slide 0.4s cubic-bezier(0,.68,.51,.98);
+  }
+  
+  @keyframes slide {
+    from {transform: translateX(-100%)}
+    to {transform: translateX(0%)}
+  }
+
+  .logos{
+    position: absolute;
+    top: 0;
+    left: 82%;
+    color: #141E30;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1em;
+    padding: 0;
+  }
+  .logos img{
+    width: 85%;
+  }
+  .logos p{
+    margin-bottom: 0.5em;
+    padding: 0;
+  }
+
+  @media only screen and (max-width: 425px){
+    .logos{
+      left: 60%;
+      font-size: 0.5;
+    }
+}
+
+.logos2{
+  position: absolute;
+  top: 0;
+  left: 85%;
+  color: #141E30;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 1em;
+  padding: 0;
+}
+.logos2 img{
+  width: 60%;
+}
+.logos2 p{
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+@media only screen and (max-width: 425px){
+  .logos2{
+    left: 67%;
+    font-size: 0.5;
+  }
+}
+
+  /*Logos*/
+  .ai{
+    background-image: 
+    url("/images/Portfolio/logos/ai.png");
+  }
+
+  /*ASCO*/
+  #b1{
+    background-image: 
+    url("/images/Portfolio/Branding/1/wse4983.png");
+    background-position: center;
+    background-size: cover;
+  }
+   /*Tesys T*/
+   #b2{
+    background-image: 
+    url("/images/Portfolio/Branding/2/canOpen.png");
+    background-position: center;
+    background-size: cover;
+  }
+  /*SML*/
+  #b3{
+    background-image: 
+    url("/images/Portfolio/Branding/3/model6_gray.png");
+    background-position: center;
+    background-size: cover;
+  }
+   /*HEPD*/
+   #b4{
+    background-image: 
+    url("/images/Portfolio/Branding/4/hepd_box.png");
+    background-position: center;
+    background-size: cover;
+  }
+   /*AMPRO*/
+   #b5{
+    background-image: 
+    url("/images/Portfolio/Branding/5/ampro_glass.png");
+    background-position: center;
+    background-size: cover;
+  }
+   /*MGhar*/
+   #b6{
+    background-image: 
+    url("/images/Portfolio/Branding/6/meraGhar_bag.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+   /*Neheria*/
+   #w1{
+    background-image: 
+    url("/images/Portfolio/Web/1/macbook-Neheria-home.png");
+    background-position: center;
+    background-size: cover;
+  } 
+  /*SimQ*/
+  #w2{
+    background-image: 
+    url("/images/Portfolio/Web/2/simQ_close.png");
+    background-position: center;
+    background-size: cover;
+  } 
+   /*Monitors*/
+   #w3{
+    background-image: 
+    url("/images/Portfolio/Web/3/monitors_picto.png");
+    background-position: center;
+    background-size: cover;
+  } 
+   /*Solar Field*/
+   #w4{
+    background-image: 
+    url("/images/Portfolio/Web/4/solar_picto.png");
+    background-position: center;
+    background-size: cover;
+  } 
+   /*Universe*/
+   #w5{
+    background-image: 
+    url("/images/Portfolio/Web/5/uanl_mockup.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  /*Innov Week*/
+  #g1{
+    background-image: 
+    url("/images/Portfolio/Graphic/1/Escape-Room-Intro.gif");
+    background-position: center;
+    background-size: cover;
+  }
+
+  /*Customer Week*/
+  #g2{
+    background-image: 
+    url("/images/Portfolio/Graphic/2/man_customer.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  /*FIC*/
+  #g3{
+    background-image: 
+    url("/images/Portfolio/Graphic/3/coneicLQ.gif");
+    background-position: center;
+    background-size: cover;
+  }
+
+  /*Renuevo*/
+  #g4{
+    background-image: 
+    url("/images/Portfolio/Graphic/4/moubs_noBG.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  /*Fiesta Mexicana*/
+  #g5{
+    background-image: 
+    url("/images/Portfolio/Graphic/5/fiesta_mexicana.gif");
+    background-position: center;
+    background-size: cover;
+  }
+  
+ 
